@@ -289,9 +289,12 @@ async def root():
         "message": "Social Media Content Generator API",
         "version": "1.0.0",
         "endpoints": {
-            "/generate": "POST - Generate social media content from YouTube video",
+            "/": "GET - Root endpoint with API information",
             "/health": "GET - Health check endpoint",
-            "/docs": "GET - API documentation"
+            "/docs": "GET - API documentation",
+            "/generate": "POST - Generate social media content from YouTube video",
+            "/generate/stream": "GET - Stream progress events for content generation",
+            "/transcript": "GET - Fetch full transcript for a YouTube video"
         }
     }
 
