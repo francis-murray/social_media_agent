@@ -61,7 +61,7 @@ export default function Home() {
       selectedPlatforms.forEach((p) => params.append("platforms", p));
       params.append("language", language);
 
-      const url = `http://localhost:8000/generate/stream?${params.toString()}`;
+      const url = `/api/generate/stream?${params.toString()}`;
 
       const es = new EventSource(url);
 
@@ -231,7 +231,7 @@ export default function Home() {
                           const params = new URLSearchParams();
                           params.append("video_id", videoUrl.trim());
                           params.append("language", language);
-                          const resp = await fetch(`http://localhost:8000/transcript?${params.toString()}`);
+                          const resp = await fetch(`/api/transcript?${params.toString()}`);
                           if (!resp.ok) {
                               const e = await resp.json().catch(() => ({} as any));
                               throw new Error(e.detail || `HTTP ${resp.status}`);
