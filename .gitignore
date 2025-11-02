@@ -1,0 +1,70 @@
+# Root .gitignore consolidating backend and frontend ignores
+
+# -----------------------------
+# Global common
+# -----------------------------
+.DS_Store
+*.pem
+
+# Environment files (do not commit secrets)
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# -----------------------------
+# Backend (Python/FastAPI)
+# -----------------------------
+backend/__pycache__/
+backend/*.py[oc]
+backend/build/
+backend/dist/
+backend/wheels/
+backend/*.egg-info
+backend/.venv/
+
+# Python tooling caches
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+# -----------------------------
+# Frontend (Next.js/Node)
+# -----------------------------
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+
+# Testing coverage
+frontend/coverage/
+
+# Next.js build output
+frontend/.next/
+frontend/out/
+
+# Production build
+frontend/build/
+
+# Vercel
+frontend/.vercel/
+
+# TypeScript artifacts
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# -----------------------------
+# Editor/IDE
+# -----------------------------
+.vscode/
+.idea/
+
+

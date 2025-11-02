@@ -1,0 +1,13 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Social Media Agent Backend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.120.4",
+    "openai>=2.6.1",
+    "openai-agents>=0.4.2",
+    "python-dotenv>=1.2.1",
+    "youtube-transcript-api>=1.2.3",
+]
